@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="logst.css">
+ 
+  <!-- jQuery CDN Link -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Login/SignUp</title>
+</head>
+
+<body>
+<div class="homepage">
+    <div id="abc">
+        <nav>
+            <img src="img/heart.png" height="80" width="70" class="logo">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="sub.html">Subscription</a></li>
+                <li><a href="home.html#123456">About Us</a></li>
+                <li><a href="home.html#111">Contact Us</a></li>
+                <li><a href="home.html#789">Blogs</a></li>
+                <li><a href="log.html">Login/SignUp</a></li>
+            </ul>
+        </nav>
+    </div>
+ 
+
+  <div class="container">
+    <div class="form">
+      <div class="btn">
+        <button class="signUpBtn">SIGN UP</button>
+        <button class="loginBtn">LOG IN</button>
+      </div>
+      <form class="signUp" action="connect.php" method="POST" onsubmit="return validate()">
+        <div class="formGroup">
+          <input type="text" id="userName" placeholder="User Name" autocomplete="off" name="Uname">
+        </div>
+        <div class="formGroup">
+          <input type="email" placeholder="Email ID" name="email" required autocomplete="off" name="email">
+        </div>
+        <div class="formGroup">
+          <input type="password" id="password" placeholder="Password" required autocomplete="off" name="password">
+        </div>
+        <div class="formGroup">
+          <input type="password" id="confirmPassword" placeholder="Confirm Password" required autocomplete="off">
+        </div>
+        <div class="checkBox">
+          <input type="checkbox" name="checkbox" id="checkbox">
+          <span class="text">I agree with term & conditions</span>
+        </div>
+        <div class="formGroup">
+          <button type="submit" class="btn2">REGISTER</button>
+        </div>
+ 
+      </form>
+        
+      <!------ Login Form -------- -->
+      <form class="login" action="validation.php" method="POST">
+        
+        <div class="formGroup">
+          <input type="email" placeholder="Email ID" name="email" required autocomplete="off">
+        </div>
+        <div class="formGroup">
+          <input type="password" id="password" placeholder="Password" required autocomplete="off" name="password">
+         
+        </div>
+        <div class="checkBox">
+          <input type="checkbox" name="checkbox" id="checkbox1">
+          <span class="text">Keep me signed in on this device</span>
+        </div>
+        <div class="formGroup">
+          <button type="submit" class="btn2">Login</button>
+        </div>
+ 
+      </form>
+ 
+    </div>
+  </div>
+
+
+
+
+<div class="copyright">
+<p class="copy-text">Copyright &copy;2022 4PIXELS All Rights Reserved</p>
+</div>
+ 
+  <script src="jQuery.js"></script>
+  <script src="act.js"></script>
+  <script src="valcheck.js"></script>
+
+</body>
+ 
+</html>
