@@ -1,0 +1,31 @@
+<?php
+$connection = mysqli_connect('localhost','root');
+
+if ($connection) {
+    
+}
+else {
+    echo "ERROR: Connection failed";
+}
+
+mysqli_select_db($connection, 'authentication');
+
+$username = $_POST['Uname'];
+$email = $_POST['email'];
+$pass = $_POST['password'];
+
+$s = "select * from credentials where EMAIL = '$email' && PASSWD = '$pass'";
+$result = mysqli_query($connection,$s);
+$num = mysqli_num_rows($result);
+
+if($num == 1)
+{
+    header('location:logsucc.php');
+}
+else
+{
+    echo"Not registered";
+    
+}
+
+?>
